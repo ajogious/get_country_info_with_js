@@ -67,13 +67,18 @@ const getCountryData = function (country) {
       renderCountry(data, 'neighbour');
     })
     .catch(err => {
-      console.error(`${err} 💥💥💥`);
       renderError(`Something went wrong 💥💥 ${err.message}. Try again!`);
     })
     .finally(() => (countriesContainer.style.opacity = 1));
 };
 
 btn.addEventListener('click', () => {
-  getCountryData(countryName.value);
-  countryName.value = '';
+  const countryNameVal = countryName.value;
+  if (countryNameVal === '') {
+    renderError('Input a country name 🔄');
+    countriesContainer.style.opacity = 1;
+  } else {
+    getCountryData(countryName.value);
+    countryName.value = '';
+  }
 });

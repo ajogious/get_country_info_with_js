@@ -131,7 +131,7 @@ body {
   padding: 2rem 5rem;
   border-radius: 0.7rem;
   color: white;
-  background-color: orangered;
+  background-color: #77574c;
   cursor: pointer;
   width: 100%;
 }
@@ -146,15 +146,3 @@ body {
   outline: none;
   width: 100%;
 }
-
-/* @media(max-width = '660px') {
-  #country-name-input {
-  font-size: 3rem;
-  padding: 2rem 5rem;
-  border-radius: 0.7rem;
-  margin-bottom: 1rem;
-  border: 0.5rem solid #888;
-  color: #888;
-  outline: none;
-} */
-/* } */
